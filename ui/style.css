@@ -18,5 +18,10 @@ body {
 
 .img-medium {
     height: 200px;
+
 }
+.container{
+         color: green;
+         font-family: arial;
+     } 
 
