@@ -13,7 +13,9 @@ var articleone = {
 function createTemplate(data){
     var title = data.title;
     var content = data.content;
-   var htmltemplate = "<html><head><link href='/'><title>${title}</title> <link href='/ui/style.css' rel='stylesheet'>  </head> <body> <div class='container'><p><h1>${content}</h1></div></body></html>"; 
+   var htmltemplate = `<html><head><link href="/"><title>
+   ${title}</title> <link href="/ui/style.css" rel="stylesheet">  </head> <body> <div class="container"><p><h1>
+   ${content}</h1></div></body></html>`; 
    return htmltemplate;
 }
 
