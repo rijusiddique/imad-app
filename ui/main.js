@@ -5,15 +5,21 @@ function moveRight(){
    marginLeft = marginLeft+10;
    img1.style.marginLeft = marginLeft+'px';
 };
-var counter = 0;
+
 var button = document.getElementById('counter');
 button.onclick = function(){
     //make a request to counter endpoint
-    
+    var request = new XMLHttpRequest();
+    request.open('GET','http://rijusiddique.imad.hasura-app.io/counter', true);
+    request.send(null);
     //capture the response and store it in a variable
-    
-    //render the variable in the span for showing count
-    counter = counter+1;
-    var countSpan = document.getElementById('count');
+    request.onreadystatechange = function(){
+        if(request.readystate==XMLHttpRequest.DONE && request.status==200){
+            var counter = request.responseText;
+            var countSpan = document.getElementById('count');
     countSpan.innerHTML = counter.toString();
+        }
+    }
+   
+    
 }
