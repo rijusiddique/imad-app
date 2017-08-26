@@ -5,7 +5,14 @@ function moveRight(){
    marginLeft = marginLeft+10;
    img1.style.marginLeft = marginLeft+'px';
 };
-img1.onclick=function(){
-    alert("moving image");
-    var interval = setInterval(moveRight,100);
-};
+var button = document.getElementById('counter');
+button.onclick = function(){
+    //make a request to counter endpoint
+    
+    //capture the response and store it in a variable
+    
+    //render the variable in the span for showing count
+    counter = counter+1;
+    var countSpan = document.getElementbyId("count");
+    countSpan.innerHTML = counter.toString();
+}
