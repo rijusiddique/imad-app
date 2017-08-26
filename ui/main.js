@@ -10,8 +10,7 @@ var button = document.getElementById('counter');
 button.onclick = function(){
     //make a request to counter endpoint
     var request = new XMLHttpRequest();
-    request.open('GET','http://rijusiddique.imad.hasura-app.io/counter', true);
-    request.send(null);
+    
     //capture the response and store it in a variable
     request.onreadystatechange = function(){
         if(request.readystate==XMLHttpRequest.DONE && request.status==200){
@@ -20,6 +19,7 @@ button.onclick = function(){
     countSpan.innerHTML = counter.toString();
         }
     }
-   
+   request.open('GET','http://rijusiddique.imad.hasura-app.io/counter', true);
+    request.send(null);
     
 }
