@@ -14,7 +14,7 @@ button.onclick = function(){
     //capture the response and store it in a variable
     request.onreadystatechange = function(){
         alert("inside readystate function");
-        if(request.readystate==XMLHttpRequest.DONE && request.status==200){
+        if(request.readyState==XMLHttpRequest.DONE && request.status==200){
                     alert("getting count");
 
             var counter = request.responseText;
